@@ -699,6 +699,23 @@ img {
     /* Изменение цвета иконки при наведении */
 }
 
+
+/* Стили при наведении на кнопку */
+.send-button:hover {
+    background-color: #404bbf;
+    /* Изменение цвета фона при наведении */
+    border: none;
+    /* Убираем границу при наведении */
+}
+
+/* Стили при фокусе на кнопку */
+.send-button:focus {
+    background-color: #404bbf;
+    /* Изменение цвета фона при фокусе */
+    border: none;
+    /* Убираем границу при фокусе */
+}
+
 .form-title {
     font-weight: 500;
     /* Полужирный текст */
@@ -912,7 +929,7 @@ img {
     /* Цвет текста (белый) */
     cursor: pointer;
     /* Изменение курсора при наведении */
-    background-color: var(--primary-brand-color);
+    background-color: #4D5AE5;;
     /* Фон кнопки */
     border: none;
     /* Убираем границу */
