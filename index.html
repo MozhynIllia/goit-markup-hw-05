@@ -1,61 +1,86 @@
 <!DOCTYPE html>
+<!-- Объявление типа документа как HTML5 -->
 <html lang="en">
+  <!-- Начало HTML-документа, установлен язык на английский -->
   <head>
     <meta charset="UTF-8" />
+    <!-- Установка кодировки документа на UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Настройка масштабирования для мобильных устройств -->
     <title>Web Studio</title>
+    <!-- Заголовок страницы, отображается в заголовке браузера -->
     <!-- Fonts -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
+    <!-- Подключение внешних стилей для нормализации стилей в разных браузерах -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Предварительное соединение с веб-сервером для шрифтов -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Предварительное соединение с сервером Google Fonts для шрифтов -->
     <!-- Normal -->
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Подключение шрифтов Raleway и Roboto с разными вариациями веса -->
     <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Подключение внешнего CSS-файла для стилизации страницы -->
   </head>
   <body>
-    <!--Navigation-section-->
+    <!-- Navigation-section -->
     <header class="header">
+      <!-- Заголовок страницы и навигационное меню -->
       <div class="header-inner container">
+        <!-- Контейнер для размещения элементов в заголовке -->
         <nav class="header-menu">
-          <a class="header-logo" href="./index.html"
-            >Web<span class="header-logo-accent">Studio</span></a
-          >
+          <!-- Навигационное меню -->
+          <a class="header-logo" href="./index.html">
+            <!-- Логотип с ссылкой на главную страницу -->
+            Web<span class="header-logo-accent">Studio</span>
+          </a>
           <ul class="nav-list">
+            <!-- Список ссылок в навигационном меню -->
             <li><a class="nav-link-studio" href="./index.html">Studio</a></li>
             <li><a class="nav-link" href="#">Portfolio</a></li>
             <li><a class="nav-link" href="#">Contacts</a></li>
           </ul>
         </nav>
         <address class="address-section">
+          <!-- Секция с контактной информацией -->
           <ul class="contacts-list">
+            <!-- Список контактов -->
             <li>
               <a class="contacts-link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
+              <!-- Ссылка на электронную почту -->
             </li>
             <li>
               <a class="contacts-link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
+              <!-- Ссылка на телефон -->
             </li>
           </ul>
         </address>
       </div>
     </header>
 
-    <!--Hero-section-->
+    <!-- Hero-section -->
     <main>
       <section class="hero-section">
+        <!-- Секция с героической частью страницы -->
         <div class="hero-inner container">
+          <!-- Контейнер для элементов в секции -->
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="button">Order Service</button>
+          <!-- Заголовок секции -->
+          <button type="button" class="button" data-modal-open>
+            <!-- Кнопка с атрибутом для открытия модального окна -->
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -456,15 +481,12 @@
         </div>
         <!-- Элемент формы для подписки -->
         <div class="div-footer-form">
-          <!-- Заголовок формы -->
           <p class="footer-form-p">Subscribe</p>
-          <!-- Форма для ввода email и кнопки подписки -->
           <form class="footer-form">
             <label class="footer-form-label">
-              <!-- Поле для ввода email -->
               <input
                 type="email"
-                name="subscribe-email"
+                name="subscriber-email"
                 placeholder="E-mail"
                 class="footer-form-input"
                 required
@@ -486,14 +508,12 @@
         </div>
       </div>
     </footer>
-    <!-- Завершение футера -->
-
-    <!-- Форма обратной связи в виде модального окна -->
+    <!-- FORM -->
     <div class="topbar-form-container is-hidden" data-modal>
       <div class="topbar-form-main">
         <!-- Кнопка закрытия модального окна -->
         <button type="button" class="form-close-button" data-modal-close>
-          <svg width="24" height="24" class="close-button-cross">
+          <svg width="8" height="8" class="close-button-cross">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -574,20 +594,19 @@
               class="visually-hidden"
               required
             />
-            <label class="topbar-form-label-checkbox" for="user-privacy">
-              <span class="policy-check">
-                <!-- Иконка для флажка -->
-                <svg width="16" height="16" class="check-active">
-                  <use href="./images/icons.svg#icon-Checkbox"></use>
-                </svg>
-              </span>
-              <span class="policy-text">
-                I accept the terms and conditions of the
-                <a href="#" class="policy-a">Privacy Policy</a>
-              </span>
-            </label>
+            <label class="topbar-form-label-checkbox" for="user-privacy"
+              ><span class="policy-check">
+                <svg width="16" height="12.8" class="check-active">
+                  <use
+                    href="./images/icons.svg#icon-Checkbox"
+                  ></use></svg></span
+              ><span class="policy-text"
+                >I accept the terms and conditions of the
+                <a href="#" class="policy-a">Privacy Policy</a></span
+              ></label
+            >
           </div>
-          <!-- Кнопка отправки формы -->
+          <!-- Подключение скрипта для работы с модальным окном -->
           <button
             class="send-button"
             type="submit"
@@ -598,7 +617,6 @@
         </form>
       </div>
     </div>
-
     <!-- Подключение скрипта для работы с модальным окном -->
     <script src="./script/modal.js"></script>
   </body>
