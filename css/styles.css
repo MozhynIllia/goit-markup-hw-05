@@ -612,7 +612,7 @@ img {
 .form-close-button:hover,
 .form-close-button:focus {
     fill: #ffffff;
-    background-color: var(--hover-c);
+    background-color: var(--active-button-color);
     border: none;
 }
 
@@ -733,7 +733,7 @@ img {
 }
 
 .visually-hidden:checked+.topbar-form-label-checkbox .policy-check {
-    background-color: var(--hover-c);
+    background-color: var(--active-button-color;
     border: none;
     fill: #f4f4fd;
 }
