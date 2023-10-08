@@ -516,6 +516,8 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
+    color: var(--font-color);
+        /* Используем CSS-переменную для цвета текста */
 }
 
 /* Стили для контейнера формы: отображение как flex, расстояние между элементами */
@@ -558,9 +560,24 @@ img {
     letter-spacing: 0.04em;
     color: #ffffff;
     cursor: pointer;
-    background: #4D5AE5;
+    background-color: #4D5AE5;;
     border: none;
     border-radius: 4px;
+}
+
+/* При ховере на кнопку изменяем цвет фона */
+.footer-form-button:hover {
+    background-color: #404bbf;
+    fill: #ffffff;
+}
+
+/* При фокусе на кнопку также изменяем цвет фона */
+.footer-form-button:focus {
+    background-color: #404bbf;
+    fill: #ffffff;
+    /* Изменение цвета иконки */
+    outline: none;
+    /* Убираем контур при фокусе */
 }
 
 /* Стили для иконки телеграм в форме */
@@ -664,18 +681,29 @@ img {
 /* Стили для текстовых полей ввода данных: ширина, высота, граница, радиус границы, фон, отступ слева, невидимая обводка при фокусе */
 .topbar-form-input {
     width: 100%;
+    /* Устанавливаем ширину элемента на 100% ширины родительского элемента */
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
     padding-left: 38px;
     outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Стили для текстовых полей ввода данных при фокусе */
 .topbar-form-input:focus {
-    border-color: var(--brand-c);
+    border-color: #4D5AE5;
+    /* Изменяем цвет рамки при фокусе на input */
+    outline: none;
+    /* Убираем контур при фокусе */
+}
+
+/* Стили для иконки в текстовом поле ввода данных при фокусе */
+.topbar-form-input:focus+.topbar-form-icon {
+    fill: #4D5AE5;
+    /* Изменяем цвет иконки при фокусе на input */
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Стили для иконки в текстовом поле ввода данных при фокусе */
@@ -683,7 +711,9 @@ img {
     position: absolute;
     left: 16px;
     top: 50%;
+    /* Сдвигаем элемент к верхней границе контейнера на 50% его высоты */
     transform: translateY(-50%);
+    /* Центрируем элемент по вертикали */
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -701,12 +731,12 @@ img {
 .topbar-form-textarea {
     border: 1px solid rgba(46, 47, 66, 0.4);
     width: 100%;
+    /* Устанавливаем ширину элемента на 100% ширины родительского элемента */
     height: 120px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
-    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
     padding: 8px 16px;
@@ -719,7 +749,10 @@ img {
 
 /* Стили для текстовых полей ввода данных типа textarea при фокусе */
 .topbar-form-textarea:focus {
-    border-color: #4d5ae5;
+    border-color: #4D5AE5;
+    /* Изменяем цвет рамки при фокусе на textarea */
+    outline: none;
+    /* Убираем контур при фокусе */
 }
 
 /* Стили для контейнера чекбокса: отступ снизу */
@@ -748,6 +781,26 @@ img {
     align-items: center;
     justify-content: center;
     fill: transparent;
+}
+
+/* Стили для тега span, когда input в состоянии checked */
+input:checked+label>span {
+    background-color: #404bbf;
+    /* Задаем цвет фона */
+    border: none;
+    /* Убираем стандартное оформление кнопки */
+}
+
+/* Стили для иконки внутри тега span, когда input в состоянии checked */
+input:checked+label>span svg {
+    fill: #F4F4FD;
+    /* Задаем цвет иконки */
+}
+
+/* Стили для посилання внутри label */
+label>a[class*="a-z"][class*="0-9"][class*="-_"] {
+    color: #4d5ae5;
+    /* Задаем цвет текста посилання */
 }
 
 /* Стили для чекбоксов при выборе */
