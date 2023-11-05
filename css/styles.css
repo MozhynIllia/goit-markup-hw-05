@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-     margin: 0;
+    margin: 0;
 }
 
 img {
@@ -157,9 +157,9 @@ img {
     margin: 0 auto;
     padding: 188px 0;
     background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/people-office2.jpg);
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/people-office2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -261,7 +261,7 @@ img {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    
+
 }
 
 /*Team-section*/
@@ -370,8 +370,8 @@ img {
 .portfolio-item:hover,
 .portfolio-item:focus {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-                0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-                0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-text-block {
@@ -467,7 +467,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
-    }
+}
 
 .footer-socials {
     display: flex;
@@ -516,8 +516,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    color: var(--font-color);
-        /* Используем CSS-переменную для цвета текста */
+
 }
 
 /* Стили для контейнера формы: отображение как flex, расстояние между элементами */
@@ -560,7 +559,8 @@ img {
     letter-spacing: 0.04em;
     color: #ffffff;
     cursor: pointer;
-    background-color: #4D5AE5;;
+    background-color: #4D5AE5;
+    ;
     border: none;
     border-radius: 4px;
 }
@@ -605,7 +605,7 @@ img {
     transform: translate(-50%, -50%) scale(1);
     width: 408px;
     min-height: 584px;
-    background: #fcfcfc;
+    background: #fafafa;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -785,10 +785,10 @@ img {
 
 /* Стили для тега span, когда input в состоянии checked */
 input:checked+label>span {
-    background-color: #404bbf;
-    /* Задаем цвет фона */
-    border: none;
+
+
     /* Убираем стандартное оформление кнопки */
+    border-color: #4d5ae5;
 }
 
 /* Стили для иконки внутри тега span, когда input в состоянии checked */
@@ -804,11 +804,7 @@ label>a[class*="a-z"][class*="0-9"][class*="-_"] {
 }
 
 /* Стили для чекбоксов при выборе */
-.visually-hidden:checked+.topbar-form-label-checkbox .policy-check {
-    background-color: var(--hover-c);
-    border: none;
-    fill: #f4f4fd;
-}
+.visually-hidden:checked+.topbar-form-label-checkbox .policy-check {}
 
 /* Стили для текста с ссылкой на политику */
 .policy-a {
@@ -845,6 +841,14 @@ label>a[class*="a-z"][class*="0-9"][class*="-_"] {
 .policy-check-text {
     display: inline-block;
     padding-left: 8px;
+}
+
+.policy-check svg {
+    visibility: hidden;
+}
+
+input:checked+label>span svg {
+    visibility: visible;
 }
 
 /* Класс для скрытия элементов путем установки свойства display в "none" */
